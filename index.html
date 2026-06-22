@@ -1,130 +1,407 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Anniversary ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <audio id="bg-music" loop>
-        <source src="./images/music.mp3" type="audio/mp3" />
+      <source src="./images/music.mp3" type="audio/mp3" />
     </audio>
 
     <div id="loading-screen" class="theme-loading">
-        <div class="heart-pulse-container">
-            <img src="./images/photo0.jpeg" class="loading-photo" alt="Loading Photo">
-        </div>
-        <h1 class="romantic-text pulse-text">Loading my love for you... ❤️</h1>
-        <p>Compiling 730 days of memories...</p>
+      <div class="heart-pulse-container">
+        <img
+          src="./images/photo0.jpeg"
+          class="loading-photo"
+          alt="Loading Photo"
+        />
+      </div>
+      <h1 class="romantic-text pulse-text">Loading my love for you... ❤️</h1>
+      <p>Compiling 730 days of memories...</p>
     </div>
 
     <header>
-        <nav>
-            <a href="#timeline">Journey</a>
-            <a href="#love">Things I Love</a>
-            <a href="#gallery">Memories</a>
-            <a href="#letter">Letter</a>
-        </nav>
+      <nav>
+        <a href="#timeline">Journey</a>
+        <a href="#love">Things I Love</a>
+        <a href="#gallery">Memories</a>
+        <a href="#letter">Letter</a>
+      </nav>
     </header>
 
     <section class="hero theme-hero">
-        <div class="secret-item decoy" style="top: 15%; left: 25%;" onclick="pokeDecoy(this)">🌻</div>
-        <div class="secret-item decoy" style="top: 60%; right: 25%;" onclick="pokeDecoy(this)">🧸</div>
-        <div class="hero-content fade-in">
-            <h1 class="romantic-text huge-text">Our Story</h1>
-            <p class="subtitle">
-                2 Years <br>730 Days <br>17,520 Hours <br>Countless Memories <br>One Amazing Girl ❤️
-            </p>
-            <h2 id="counter"></h2>
-            <button onclick="scrollToTimeline()">Begin Our Journey ↓</button>
-        </div>
-        <div class="secret-item" style="bottom: 15%; right: 25%;" onclick="showSecret(this, 'I still remember the butterflies I felt on day one 🦋')">🦋</div>
+      <div
+        class="secret-item decoy"
+        style="top: 15%; left: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🌻
+      </div>
+      <div
+        class="secret-item decoy"
+        style="top: 60%; right: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🧸
+      </div>
+      <div class="hero-content fade-in">
+        <h1 class="romantic-text huge-text">Our Story</h1>
+        <p class="subtitle">
+          2 Years <br />730 Days <br />17,520 Hours <br />Countless Memories
+          <br />One Amazing Girl ❤️
+        </p>
+        <h2 id="counter"></h2>
+        <button onclick="scrollToTimeline()">Begin Our Journey ↓</button>
+      </div>
+      <div
+        class="secret-item"
+        style="bottom: 15%; right: 25%"
+        onclick="
+          showSecret(
+            this,
+            'I still remember the butterflies I felt on day one 🦋',
+          )
+        "
+      >
+        🦋
+      </div>
     </section>
 
     <section class="timeline theme-timeline" id="timeline">
-        <h2 class="romantic-text section-title fade-in">Our Journey ❤️</h2>
-        <div class="secret-item decoy" style="top: 50px; right: 25%;" onclick="pokeDecoy(this)">🎀</div>
-        <div class="secret-item decoy" style="bottom: 10%; left: 20%;" onclick="pokeDecoy(this)">🍫</div>
-        <div class="timeline-container">
-            <div class="line"></div>
-            <div class="timeline-item slide-in-left">
-                <div class="secret-item" style="top: -10px; left: 25px;" onclick="showSecret(this, 'You smell better than any flower in the world 🌸')">🌸</div>
-                <div class="bubble">
-                    <h3 class="romantic-text">🌸 Beginning</h3>
-                    <img src="./images/photo1.jpeg" alt="First message" />
-                    <p>The message that started our story.</p>
-                </div>
-            </div>
-            <div class="timeline-item slide-in-right">
-                <div class="bubble">
-                    <h3 class="romantic-text">📞 First Call</h3>
-                    <img src="./images/photo2.jpeg" alt="First call" />
-                    <p>The day your voice became my favorite sound.</p>
-                </div>
-            </div>
-            <div class="timeline-item slide-in-left">
-                <div class="secret-item" style="bottom: -15px; right: 25px;" onclick="showSecret(this, 'Every step of this journey has been magic ✨')">✨</div>
-                <div class="bubble">
-                    <h3 class="romantic-text">❤️ First Meeting</h3>
-                    <img src="./images/photo3.jpeg" alt="First meeting" />
-                    <p>I was nervous. You were beautiful.</p>
-                </div>
-            </div>
+      <h2 class="romantic-text section-title fade-in">Our Journey ❤️</h2>
+      <div
+        class="secret-item decoy"
+        style="top: 50px; right: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🎀
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 10%; left: 20%"
+        onclick="pokeDecoy(this)"
+      >
+        🍫
+      </div>
+      <div class="timeline-container">
+        <div class="line"></div>
+        <div class="timeline-item slide-in-left">
+          <div
+            class="secret-item"
+            style="top: -10px; left: 25px"
+            onclick="
+              showSecret(
+                this,
+                'You smell better than any flower in the world 🌸',
+              )
+            "
+          >
+            🌸
+          </div>
+          <div class="bubble">
+            <h3 class="romantic-text">🌸 Beginning</h3>
+            <img src="./images/photo1.jpeg" alt="First message" />
+            <p>The message that started our story.</p>
+          </div>
         </div>
+        <div class="timeline-item slide-in-right">
+          <div class="bubble">
+            <h3 class="romantic-text">📞 First Call</h3>
+            <img src="./images/photo2.jpeg" alt="First call" />
+            <p>The day your voice became my favorite sound.</p>
+          </div>
+        </div>
+        <div class="timeline-item slide-in-left">
+          <div
+            class="secret-item"
+            style="bottom: -15px; right: 25px"
+            onclick="
+              showSecret(this, 'Every step of this journey has been magic ✨')
+            "
+          >
+            ✨
+          </div>
+          <div class="bubble">
+            <h3 class="romantic-text">❤️ First Meeting</h3>
+            <img src="./images/photo3.jpeg" alt="First meeting" />
+            <p>I was nervous. You were beautiful.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="love-section theme-love" id="love">
-        <h2 class="romantic-text section-title fade-in">Things I Love About You ❤️</h2>
-        <p class="fade-in">Click the cards to reveal a secret...</p>
-        <div class="secret-item decoy" style="top: 15%; left: 25%;" onclick="pokeDecoy(this)">🌷</div>
-        <div class="secret-item decoy" style="bottom: 5%; right: 20%;" onclick="pokeDecoy(this)">🎵</div>
-        <div class="secret-item" style="top: 25px; right: 25%;" onclick="showSecret(this, 'I could write a million cards and still not list everything I love about you 💌')">💌</div>
-        <div class="cards">
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">😊</span><br>Your Smile</div><div class="flip-card-back">It instantly brightens my worst days and makes everything okay.</div></div></div>
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">🌸</span><br>Your Kindness</div><div class="flip-card-back">The way you care about others makes me so incredibly proud to be yours.</div></div></div>
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">😂</span><br>Your Laugh</div><div class="flip-card-back">My absolute favorite sound in the whole universe. I love making you laugh.</div></div></div>
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">💪</span><br>Your Strength</div><div class="flip-card-back">Even when things are hard and you're overwhelmed, you never give up.</div></div></div>
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">❤️</span><br>Your Big Heart</div><div class="flip-card-back">Your heart is so pure. I'm the luckiest guy alive to have a place in it.</div></div></div>
-            <div class="flip-card pop-in" onclick="this.classList.toggle('flipped')"><div class="flip-card-inner"><div class="flip-card-front"><span class="emoji">✨</span><br>Making Days Special</div><div class="flip-card-back">Just a simple text from you turns a boring day into a perfect one.</div></div></div>
+      <h2 class="romantic-text section-title fade-in">
+        Things I Love About You ❤️
+      </h2>
+      <p class="fade-in">Click the cards to reveal a secret...</p>
+      <div
+        class="secret-item decoy"
+        style="top: 15%; left: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🌷
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 5%; right: 20%"
+        onclick="pokeDecoy(this)"
+      >
+        🎵
+      </div>
+      <div
+        class="secret-item"
+        style="top: 25px; right: 25%"
+        onclick="
+          showSecret(
+            this,
+            'I could write a million cards and still not list everything I love about you 💌',
+          )
+        "
+      >
+        💌
+      </div>
+      <div class="cards">
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">😊</span><br />Your Smile
+            </div>
+            <div class="flip-card-back">
+              It instantly brightens my worst days and makes everything okay.
+            </div>
+          </div>
         </div>
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">🌸</span><br />Your Kindness
+            </div>
+            <div class="flip-card-back">
+              The way you care about others makes me so incredibly proud to be
+              yours.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">😂</span><br />Your Laugh
+            </div>
+            <div class="flip-card-back">
+              My absolute favorite sound in the whole universe. I love making
+              you laugh.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">💪</span><br />Your Strength
+            </div>
+            <div class="flip-card-back">
+              Even when things are hard and you're overwhelmed, you never give
+              up.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">❤️</span><br />Your Big Heart
+            </div>
+            <div class="flip-card-back">
+              Your heart is so pure. I'm the luckiest guy alive to have a place
+              in it.
+            </div>
+          </div>
+        </div>
+        <div
+          class="flip-card pop-in"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <span class="emoji">✨</span><br />Making Days Special
+            </div>
+            <div class="flip-card-back">
+              Just a simple text from you turns a boring day into a perfect one.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="gallery theme-gallery" id="gallery">
-        <h2 class="romantic-text section-title fade-in">Our Memories</h2>
-        <div class="secret-item decoy" style="top: 30px; right: 25%;" onclick="pokeDecoy(this)">🧸</div>
-        <div class="secret-item decoy" style="bottom: 10%; left: 20%;" onclick="pokeDecoy(this)">🎀</div>
-        <div class="secret-item decoy" style="bottom: 50%; right: 20%;" onclick="pokeDecoy(this)">🍫</div>
-        <div class="secret-item" style="top: 25px; left: 25%;" onclick="showSecret(this, 'Every picture of you is my favorite picture 📸')">📸</div>
-        <div class="gallery-grid">
-            <div class="memory-card pop-in">
-                <div class="secret-item" style="top: -10px; right: 10px;" onclick="showSecret(this, 'I want to make a thousand more memories just like this 🎁')">🎁</div>
-                <div class="img-wrapper"><img src="./images/photo5.jpeg" alt="Memory"></div><p class="romantic-text">Our First Choti Eid</p>
-            </div>
-            <div class="memory-card pop-in"><div class="img-wrapper"><img src="./images/photo6.jpeg" alt="Memory"></div><p class="romantic-text">Our First Bari Eid</p></div>
-            <div class="memory-card pop-in"><div class="img-wrapper"><img src="./images/photo7.jpeg" alt="Memory"></div><p class="romantic-text">Our Second Choti Eid</p></div>
-            <div class="memory-card pop-in"><div class="img-wrapper"><img src="./images/photo8.jpeg" alt="Memory"></div><p class="romantic-text">Our Second Bari Eid</p></div>
+      <h2 class="romantic-text section-title fade-in">Our Memories</h2>
+      <div
+        class="secret-item decoy"
+        style="top: 30px; right: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🧸
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 10%; left: 20%"
+        onclick="pokeDecoy(this)"
+      >
+        🎀
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 50%; right: 20%"
+        onclick="pokeDecoy(this)"
+      >
+        🍫
+      </div>
+      <div
+        class="secret-item"
+        style="top: 25px; left: 25%"
+        onclick="
+          showSecret(this, 'Every picture of you is my favorite picture 📸')
+        "
+      >
+        📸
+      </div>
+      <div class="gallery-grid">
+        <div class="memory-card pop-in">
+          <div
+            class="secret-item"
+            style="top: -10px; right: 10px"
+            onclick="
+              showSecret(
+                this,
+                'I want to make a thousand more memories just like this 🎁',
+              )
+            "
+          >
+            🎁
+          </div>
+          <div class="img-wrapper">
+            <img src="./images/photo5.jpeg" alt="Memory" />
+          </div>
+          <p class="romantic-text">Our First Choti Eid</p>
         </div>
+        <div class="memory-card pop-in">
+          <div class="img-wrapper">
+            <img src="./images/photo6.jpeg" alt="Memory" />
+          </div>
+          <p class="romantic-text">Our First Bari Eid</p>
+        </div>
+        <div class="memory-card pop-in">
+          <div class="img-wrapper">
+            <img src="./images/photo7.jpeg" alt="Memory" />
+          </div>
+          <p class="romantic-text">Our Second Choti Eid</p>
+        </div>
+        <div class="memory-card pop-in">
+          <div class="img-wrapper">
+            <img src="./images/photo8.jpeg" alt="Memory" />
+          </div>
+          <p class="romantic-text">Our Second Bari Eid</p>
+        </div>
+      </div>
     </section>
 
     <section class="version theme-version fade-in">
-        <div class="secret-item" style="top: 15px; right: 25%;" onclick="showSecret(this, 'If you could see yourself through my eyes, you would never doubt yourself again 💖')">💖</div>
-        <div class="secret-item decoy" style="bottom: 20px; left: 25%;" onclick="pokeDecoy(this)">🌷</div>
-        <div class="glass-box">
-            <h2 class="romantic-text">The Version Of You I See ❤️</h2>
-            <p>When you think you're difficult to love, I see someone who cares so deeply that she worries about everyone around her.<br><br>When you think you're too much, I see someone whose heart is bigger than most people can understand.<br><br>When you doubt yourself, I see strength.<br><br>When you don't see your beauty, I see someone who lights up every room she walks into.</p>
-        </div>
+      <div
+        class="secret-item"
+        style="top: 15px; right: 25%"
+        onclick="
+          showSecret(
+            this,
+            'If you could see yourself through my eyes, you would never doubt yourself again 💖',
+          )
+        "
+      >
+        💖
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 20px; left: 25%"
+        onclick="pokeDecoy(this)"
+      >
+        🌷
+      </div>
+      <div class="glass-box">
+        <h2 class="romantic-text">The Version Of You I See ❤️</h2>
+        <p>
+          When you think you're difficult to love, I see someone who cares so
+          deeply that she worries about everyone around her.<br /><br />When you
+          think you're too much, I see someone whose heart is bigger than most
+          people can understand.<br /><br />When you doubt yourself, I see
+          strength.<br /><br />When you don't see your beauty, I see someone who
+          lights up every room she walks into.
+        </p>
+      </div>
     </section>
 
     <section class="letters-area theme-letters" id="letter">
-        <div class="secret-item" style="top: 25px; left: 25%;" onclick="showSecret(this, 'I promise to always choose you. 🔒')">🔒</div>
-        <div class="secret-item decoy" style="bottom: 30%; right: 20%;" onclick="pokeDecoy(this)">🌻</div>
-        <div class="future-letter fade-in"><h2 class="romantic-text">Letter To Our Future ❤️</h2><p>Dear Future Us,<br><br>I hope we're still laughing at stupid jokes. Still teasing each other. Still making memories. Still choosing each other every day.<br><br>Love,<br>The guy who fell for you 730 days ago ❤️</p></div>
-        <div class="real-letter fade-in"><h2 class="romantic-text">A Letter For You ❤️</h2><p class="handwriting">My Love,<br><br>Two years ago, I had no idea that a simple conversation would become one of the most beautiful parts of my life.<br><br>Through every laugh, every late-night conversation, every memory, and every challenge, you've become someone I cherish more than words can express.<br><br>Thank you for staying. Thank you for caring. Thank you for every little thing you do that makes my days brighter.<br><br>No relationship is perfect, but through every version of ourselves over these past two years, one thing has remained the same: I am grateful that I get to love you.<br><br>If I could go back to the very beginning and choose again, I would still choose you. Every time.<br><br>Happy Anniversary, sweetheart. ❤️</p></div>
-        <a href="secret.html" class="secret-heart fade-in">❤️</a>
+      <div
+        class="secret-item"
+        style="top: 25px; left: 25%"
+        onclick="showSecret(this, 'I promise to always choose you. 🔒')"
+      >
+        🔒
+      </div>
+      <div
+        class="secret-item decoy"
+        style="bottom: 30%; right: 20%"
+        onclick="pokeDecoy(this)"
+      >
+        🌻
+      </div>
+      <div class="future-letter fade-in">
+        <h2 class="romantic-text">Letter To Our Future ❤️</h2>
+        <p>
+          Dear Future Us,<br /><br />I hope we're still laughing at stupid
+          jokes. Still teasing each other. Still making memories. Still choosing
+          each other every day.<br /><br />Love,<br />The guy who fell for you
+          730 days ago ❤️
+        </p>
+      </div>
+      <div class="real-letter fade-in">
+        <h2 class="romantic-text">A Letter For You ❤️</h2>
+        <p class="handwriting">
+          My Love,<br /><br />Two years ago, I had no idea that a simple
+          conversation would become one of the most beautiful parts of my
+          life.<br /><br />Through every laugh, every late-night conversation,
+          every memory, and every challenge, you've become someone I cherish
+          more than words can express.<br /><br />Thank you for staying. Thank
+          you for caring. Thank you for every little thing you do that makes my
+          days brighter.<br /><br />No relationship is perfect, but through
+          every version of ourselves over these past two years, one thing has
+          remained the same: I am grateful that I get to love you.<br /><br />If
+          I could go back to the very beginning and choose again, I would still
+          choose you. Every time.<br /><br />Happy Anniversary, sweetheart. ❤️
+        </p>
+      </div>
+      <a href="secret.html" class="secret-heart fade-in">❤️</a>
     </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
