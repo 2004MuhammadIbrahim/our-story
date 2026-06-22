@@ -1,6 +1,3 @@
-/* =========================================
-   SCROLL ANIMATIONS
-========================================= */
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -19,20 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
   animatedElements.forEach((el) => observer.observe(el));
 });
 
-/* =========================================
-   INTERACTIVE BUBBLE & DECOY LOGIC
-========================================= */
 function showSecret(element, message) {
-  // Prevent spamming bubbles
   if (element.querySelector(".secret-bubble")) return;
-
   const bubble = document.createElement("div");
   bubble.className = "secret-bubble";
   bubble.innerText = message;
-
   element.appendChild(bubble);
-
-  // Auto-remove after 4 seconds
   setTimeout(() => {
     bubble.style.opacity = "0";
     bubble.style.transition = "opacity 0.4s";
@@ -42,18 +31,14 @@ function showSecret(element, message) {
 
 function pokeDecoy(element) {
   element.style.animation = "none";
-  void element.offsetWidth; // Trigger reflow to restart animation
+  void element.offsetWidth;
   element.style.animation = "shakeDecoy 0.4s";
 }
 
-/* =========================================
-   INDEX.HTML LOGIC
-========================================= */
 const loadingScreen = document.getElementById("loading-screen");
 if (loadingScreen) {
   window.onload = function () {
     setTimeout(() => {
-      // Fade out loading screen smoothly
       loadingScreen.style.opacity = "0";
       loadingScreen.style.transition = "opacity 0.8s";
       setTimeout(() => (loadingScreen.style.display = "none"), 800);
@@ -65,14 +50,10 @@ function scrollToTimeline() {
   const timeline = document.querySelector(".timeline");
   const music = document.getElementById("bg-music");
 
-  // Start the music on her first tap!
   if (music) {
-    music
-      .play()
-      .catch((error) => console.log("Audio play blocked until interaction"));
+    music.play().catch((error) => console.log("Audio block"));
   }
 
-  // Scroll down
   if (timeline) {
     timeline.scrollIntoView({ behavior: "smooth" });
   }
@@ -87,26 +68,9 @@ if (counterEl) {
   counterEl.innerHTML = days + " days together ❤️";
 }
 
-/* =========================================
-   SECRET.HTML LOGIC
-========================================= */
 const target = document.getElementById("typewriter");
-
 if (target) {
-  const secretText = `There is one more thing I need you to know...
-
-Thank you.
-
-Thank you for every smile.
-Thank you for every late-night conversation.
-Thank you for every memory.
-Thank you for choosing me.
-
-If I could start over and live these last two years again...
-I would still choose you.
-
-Every. Single. Time. ❤️`;
-
+  const secretText = `There is one more thing I need you to know...\n\nThank you.\n\nThank you for every smile.\nThank you for every late-night conversation.\nThank you for every memory.\nThank you for choosing me.\n\nIf I could start over and live these last two years again...\nI would still choose you.\n\nEvery. Single. Time. ❤️`;
   let index = 0;
 
   function type() {
@@ -121,24 +85,26 @@ Every. Single. Time. ❤️`;
     } else {
       const finalBtn = document.getElementById("final-btn");
       if (finalBtn) finalBtn.style.display = "inline-block";
-
-      // Auto-scroll down slightly so button is definitely visible
       window.scrollBy({ top: 100, behavior: "smooth" });
     }
   }
-
   setTimeout(type, 1000);
 }
 
 function showFinalMessage() {
   const finalMessage = document.getElementById("final-message");
   const finalBtn = document.getElementById("final-btn");
+  const music = document.getElementById("bg-music");
 
   if (finalMessage) {
     finalMessage.style.display = "block";
     if (finalBtn) finalBtn.style.display = "none";
 
-    // Scroll to the very bottom to see the final message perfectly
+    // Play music for finale!
+    if (music) {
+      music.play().catch((e) => console.log("Audio block"));
+    }
+
     setTimeout(() => {
       window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     }, 100);
